@@ -1,0 +1,15 @@
+# for ctrl right and left arrows
+bindkey ^[[1;5D prev
+bindkey ^[[1;5C next
+
+bindkey "^[[D" prev # ctrl-left
+bindkey "^[[C" next # ctrl-right
+
+# To remove splits
+bind X remove
+
+# Window list at the bottom. hostname, centered tabs and redmarked active windows:
+#hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+#caption     always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
