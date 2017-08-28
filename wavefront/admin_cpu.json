@@ -1,0 +1,16 @@
+{
+  "name": "admin_cpu",
+  "target": "krolm.com@gmail.com",
+  "condition": "100 - ts(cpu.idle.percent,tag=admin-server and alert=true) > 95",
+  "displayExpression": "100 - ts(cpu.idle.percent,tag=admin-server and alert=true)",
+  "minutes": 60,
+  "resolveAfterMinutes": 5,
+  "severity": "warn",
+  "tags": {
+    "customerTags": [
+      "admin-server",
+      "cpu-usage"
+    ]
+  },
+  "additionalInformation": "Admin servers cpu usage high in the last hour"
+}
